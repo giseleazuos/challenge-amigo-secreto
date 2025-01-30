@@ -13,7 +13,7 @@ let amigos = [];
 function adicionarAmigo() {
     let nome = document.getElementById("amigo").value;
 
-    if(nome == "") {
+    if(nome.trim() === "") {
         alert("Por favor, insira um nome válido!");
     } else {
         amigos.push(nome);
@@ -36,8 +36,13 @@ function exibirNomes() {
     });
 }
 
-
-
 function sortearAmigo() {
 
+    if(amigos.length != 0) {
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+        let nomeSorteado = amigos[indiceAleatorio];
+        document.getElementById("resultado").textContent = `O amigo secreto sorteado é: ${nomeSorteado}`;
+    } 
 }
+
