@@ -33,6 +33,8 @@ function sortearAmigo() {
 
         let nomeSorteado = amigos[indiceAleatorio];
         document.getElementById("resultado").textContent = `O amigo secreto sorteado é: ${nomeSorteado}`;
+    } else {
+        alert("Por favor, insira os nomes antes de sortear!");
     }
 }
 
